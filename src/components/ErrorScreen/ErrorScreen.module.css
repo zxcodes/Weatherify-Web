@@ -1,0 +1,26 @@
+.error_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 4em 2em;
+  /* border: 1px white solid; */
+}
+.arrow {
+  font-size: 1.2em;
+  margin-left: -0.3em;
+}
+.link {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+  font-size: 1.2em;
+}
+
+.error_text {
+  color: #fff;
+  font-weight: 200;
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-top: 2em;
+}

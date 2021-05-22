@@ -1,0 +1,101 @@
+.wrapper {
+  margin: 1em;
+}
+input {
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  backdrop-filter: blur(3px);
+  border-bottom: 1px rgba(255, 255, 255, 0.384) solid;
+  outline: none;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.3em;
+}
+::placeholder {
+  color: rgba(255, 255, 255, 0.664);
+  font-weight: 200;
+}
+.cities_holder {
+  display: flex;
+  align-items: center;
+}
+
+h3 {
+  padding: 0.6em 0 0.3em 0.6em;
+  color: rgba(255, 255, 255, 0.795);
+  font-weight: 300;
+}
+p {
+  color: rgba(255, 255, 255, 0.795);
+  font-weight: 300;
+  margin-left: 0.8em;
+  margin-top: 0.3em;
+}
+.down_arrow {
+  color: #fff;
+  font-size: 1em;
+  margin-top: 0.6em;
+  margin-left: 0.3em;
+}
+.wrapper p {
+  cursor: pointer;
+}
+.weather_detail {
+  border-top: 1px rgba(255, 255, 255, 0.384) solid;
+  margin-top: 2em;
+}
+
+.weather_detail p {
+  cursor: initial;
+}
+@media (max-width: 500px) {
+  .mob_styles {
+    border: 1px rgba(255, 255, 255, 0.582) solid;
+    border-radius: 6px;
+  }
+  .mob_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.4em;
+  }
+  .mob_header h1 {
+    color: #fff;
+    font-weight: 300;
+  }
+  .github {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+  }
+  .mob_result {
+    margin: -0.8em 1.4em 1.4em 1.4em;
+  }
+  h1 {
+    color: #fff;
+  }
+  .temp {
+    font-size: 4em;
+    font-weight: 200;
+  }
+  .city_name {
+    font-size: 2em;
+  }
+  .no_data {
+    margin: 0;
+    font-size: 1.2em;
+    width: 200px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.685);
+  }
+  input {
+    font-size: 1em;
+  }
+}
+@media (min-width: 760px) {
+  .mob_styles {
+    display: none;
+  }
+}
