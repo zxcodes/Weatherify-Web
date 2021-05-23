@@ -53,7 +53,7 @@ function Search(props) {
         <div className={styles.mob_result}>
           {weather !== "" ? (
             <>
-              <h1 className={styles.temp}>{weather.main.temp}</h1>
+              <h1 className={styles.temp}>{weather.main.temp}°C</h1>
               <h1 className={styles.city_name}>{weather.name}</h1>
             </>
           ) : (
