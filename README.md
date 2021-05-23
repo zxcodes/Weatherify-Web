@@ -10,13 +10,11 @@ https://weatherify-react.web.app/
 
 # Getting started:
 ```
-> git clone https://github.com/zxcodes/Weatherify-Web
+> git clone 'https://github.com/zxcodes/Weatherify-Web'
 > cd weatherify-web
+> npm install
 > npm start
 ```
-# Node Modules (Required):
-* React-Icons (https://react-icons.github.io/react-icons/)
-* React-Error_boundary (https://www.npmjs.com/package/react-error-boundary)
 
 # Screenshots:
 
