@@ -30,6 +30,7 @@ function Search(props) {
   }
   // To dynamically change the app background.
   async function getBackgroundImage() {
+    let cityInputValue = cityInput.current.value;
     if(!process.env.REACT_APP_NOT_SECRET_CODE_TWO)  throw new Error("Error: No Image Token");
     const URL = `https://api.pexels.com/v1/search?query=${cityInputValue}&orientation=landscape&per_page=30"`;
     const req = await fetch(URL, {
