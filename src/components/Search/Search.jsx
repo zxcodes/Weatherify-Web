@@ -22,22 +22,33 @@ function Search(props) {
       let data = await fetch(URL);
       let fetchedWeather = await data.json();
       setWeather(fetchedWeather);
-      getBackgroundImage();
+
+      try {
+        await getBackgroundImage();
+      } catch (error) {
+        console.log(error);
+      }
     }
   }
   // To dynamically change the app background.
   async function getBackgroundImage() {
-    const URL = `https://api.pexels.com/v1/search?query=night and stars&orientation=landscape&per_page=30"`;
+    if (!process.env.REACT_APP_NOT_SECRET_CODE_TWO)
+      throw new Error("Error: No Image Token");
+    const URL = `https://api.pexels.com/v1/search?query=night&orientation=landscape&per_page=30"`;
     const req = await fetch(URL, {
       headers: {
         Authorization: process.env.REACT_APP_NOT_SECRET_CODE_TWO,
       },
     });
     const res = await req.json();
-    const images = res.photos.map((image) => image.src.large2x);
-    setImageArray([...imageArray, ...images]);
-    const randomImage = Math.floor(Math.random() * images.length);
-    setImage(images[randomImage]);
+    if (res.photos) {
+      const images = res.photos.map((image) => image.src.large2x);
+      setImageArray([...imageArray, ...images]);
+      const randomImage = Math.floor(Math.random() * images.length);
+      setImage(images[randomImage]);
+    } else {
+      throw new Error("Something went wrong!");
+    }
   }
   return (
     <div className={styles.wrapper}>
